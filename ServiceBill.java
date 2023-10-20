@@ -1,3 +1,5 @@
+//For Educational Purpose Only
+
 import java.util.Scanner;
 public class ServiceBill {
 			public static void main(String[] args) {
