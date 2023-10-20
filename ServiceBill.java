@@ -1,4 +1,4 @@
-//For Educational Purpose Only
+//For Educational Purposes Only
 
 import java.util.Scanner;
 public class ServiceBill {
