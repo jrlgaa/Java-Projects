@@ -41,21 +41,21 @@ public class ServiceBill {
 									//Premium Serivce Minutes and Bill Computations
 						} else if (Service == 'p') {
 									System.out.print("Enter Minutes Used During Day  : ");
-						 int dayMins = input.nextInt();
-						 System.out.print("Enter Minutes Used During Night: ");
-						 int nightMins = input.nextInt();
-								int dayCharge = chargeRate * (dayMins - dayFree);
-						 int nightBill = chargeRate * (nightMins - nightFree);
-						 int ammountDue = dayCharge + nightBill + baseCharge;
+						      int dayMins = input.nextInt();
+						      System.out.print("Enter Minutes Used During Night: ");
+						      int nightMins = input.nextInt();
+							  	int dayCharge = chargeRate * (dayMins - dayFree);
+						      int nightBill = chargeRate * (nightMins - nightFree);
+					     	  int ammountDue = dayCharge + nightBill + baseCharge;
 						
-						 //Output for Premium Service
-						 System.out.println();
-						 System.out.println("****** Service Bill ******");
-						 System.out.println("Type of Service: Premium.");
-						 System.out.println("Account Number: " + AccountNum);
-						 System.out.println("Minutes Used During Day : " + dayMins);
-						 System.out.println("Minute Used During Night: " + nightMins);
-						 System.out.println("Ammount Due: " + ammountDue);
+						      //Output for Premium Service
+						      System.out.println();
+						      System.out.println("****** Service Bill ******");
+						      System.out.println("Type of Service: Premium.");
+						      System.out.println("Account Number: " + AccountNum);
+						      System.out.println("Minutes Used During Day : " + dayMins);
+						      System.out.println("Minute Used During Night: " + nightMins);
+					      	System.out.println("Ammount Due: " + ammountDue);
 					} else {
 									System.out.print("Invalid Input Please Enter R or P ");
 						}
