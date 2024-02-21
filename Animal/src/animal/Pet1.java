@@ -1,6 +1,6 @@
 package animal;
 
-public class Animal {
+public class Pet1 {
     private String name;
     private int age;
     private String type;
