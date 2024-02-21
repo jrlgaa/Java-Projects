@@ -1,6 +1,6 @@
 package animal;
 
-public class myAnimal {
+public class Animal {
 
     public static void main(String[] args) {
     	
