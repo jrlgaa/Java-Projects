@@ -176,7 +176,8 @@ public class Registration extends JFrame {
                 lnTF.setText("");
                 cityTF.setText("");
                 scTF.setText("");
-                //registration.outputTextArea.setText("");
+
+registration.outputTextArea.setText("");
                 registration.genderGroup.clearSelection();
                 registration.strandGroup.clearSelection();
             }
