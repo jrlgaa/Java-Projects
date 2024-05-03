@@ -222,7 +222,7 @@ public class Registration extends JFrame implements ActionListener{
                 lnTF.setText("");
                 cityTF.setText("");
                 scTF.setText("");
-                emailAdd.setText("");
+                emailAddTF.setText("");
                 genderGroup.clearSelection();
             }
         });
