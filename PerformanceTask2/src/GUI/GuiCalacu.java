@@ -65,13 +65,13 @@ public class GuiCalacu extends JFrame implements ActionListener {
         
         JButton calculateButton = new JButton("COMPUTE");
         calculateButton.setBounds(10, 130, 110, 25);
-        calculateButton.setActionCommand("Compute"); // Correcting the action command
+        calculateButton.setActionCommand("Compute");
         panel.add(calculateButton);
         calculateButton.addActionListener(this);
         
         JButton clearButton = new JButton("CLEAR");
         clearButton.setBounds(150, 130, 110, 25);
-        clearButton.setActionCommand("Clear"); // Correcting the action command
+        clearButton.setActionCommand("Clear");
         panel.add(clearButton);
         clearButton.addActionListener(this);
 
