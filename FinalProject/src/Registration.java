@@ -28,7 +28,7 @@ public class Registration extends JFrame implements ActionListener{
         panel.setLayout(null);
         panel.setBackground(new Color(0xBCD3F5)); 
         this.setIconImage(icon.getImage());
-        this.setTitle("Enrollement form");
+        this.setTitle("Enrollment form");
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);        
         this.add(panel);
         this.setResizable(false);
