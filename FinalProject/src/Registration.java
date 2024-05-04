@@ -7,19 +7,11 @@ import java.io.*;
 public class Registration extends JFrame implements ActionListener{
 
     private JPanel panel;
-    private JTextField fnTF;
-    private JTextField mnTF;
-    private JTextField lnTF;
-    private JTextField cityTF;
-    private JTextField scTF;
-    private JTextField emailAddTF;
-    private JRadioButton maleRadioButton;
-    private JRadioButton femaleRadioButton;
+    private JTextField fnTF, mnTF, lnTF, addressTF, scTF, emailAddTF;
+    private JRadioButton maleRadioButton, femaleRadioButton;
     private ButtonGroup genderGroup;
-    private JComboBox<String> StrandList;
-    private JComboBox<String> MonthList;
-    private JComboBox<Integer> NumberList;
-    private JComboBox<Integer> YearList;
+    private JComboBox<String> StrandList, MonthList;
+    private JComboBox<Integer> NumberList, YearList;
 
     public Registration() {
     	
@@ -93,12 +85,12 @@ public class Registration extends JFrame implements ActionListener{
         panel.add(lnTF);
 
         JLabel addresslabel = new JLabel("Address");
-        citylabel.setBounds(10, 140, 80, 25);
-        citylabel.setFont(new Font("SansSerif",Font.LAYOUT_LEFT_TO_RIGHT, 13));
+        addresslabel.setBounds(10, 140, 80, 25);
+        addresslabel.setFont(new Font("SansSerif",Font.LAYOUT_LEFT_TO_RIGHT, 13));
         panel.add(citylabel);
-        cityTF = new JTextField();
-        cityTF.setBounds(100, 140, 170, 25);
-        panel.add(cityTF);
+        addressTF = new JTextField();
+        addressTF.setBounds(100, 140, 170, 25);
+        panel.add(addressTF);
 
         JLabel sclabel = new JLabel("School");
         sclabel.setBounds(10, 170, 80, 25);
