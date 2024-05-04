@@ -87,7 +87,7 @@ public class Registration extends JFrame implements ActionListener{
         JLabel addresslabel = new JLabel("Address");
         addresslabel.setBounds(10, 140, 80, 25);
         addresslabel.setFont(new Font("SansSerif",Font.LAYOUT_LEFT_TO_RIGHT, 13));
-        panel.add(citylabel);
+        panel.add(addresslabel);
         addressTF = new JTextField();
         addressTF.setBounds(100, 140, 170, 25);
         panel.add(addressTF);
