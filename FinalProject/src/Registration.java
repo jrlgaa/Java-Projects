@@ -92,7 +92,7 @@ public class Registration extends JFrame implements ActionListener{
         lnTF.setBounds(100, 80, 170, 25);
         panel.add(lnTF);
 
-        JLabel citylabel = new JLabel("Address");
+        JLabel addresslabel = new JLabel("Address");
         citylabel.setBounds(10, 140, 80, 25);
         citylabel.setFont(new Font("SansSerif",Font.LAYOUT_LEFT_TO_RIGHT, 13));
         panel.add(citylabel);
@@ -159,7 +159,7 @@ public class Registration extends JFrame implements ActionListener{
                 String firstName = fnTF.getText();
                 String middleName = mnTF.getText();
                 String lastName = lnTF.getText();
-                String City = cityTF.getText();
+                String Address = addressTF.getText();
                 String School = scTF.getText();
                 String strand = (String) StrandList.getSelectedItem();
                 String Gender = "";
@@ -188,7 +188,7 @@ public class Registration extends JFrame implements ActionListener{
                         break;
                 }
                 
-                if (firstName.isEmpty() || middleName.isEmpty() || lastName.isEmpty() || City.isEmpty() || School.isEmpty() || strand.isEmpty() || (!maleRadioButton.isSelected() && !femaleRadioButton.isSelected()) || Email.isEmpty()) {
+                if (firstName.isEmpty() || middleName.isEmpty() || lastName.isEmpty() || Address.isEmpty() || School.isEmpty() || strand.isEmpty() || (!maleRadioButton.isSelected() && !femaleRadioButton.isSelected()) || Email.isEmpty()) {
                     JOptionPane.showMessageDialog(panel, "Fill up the form completely.", "Reminder", JOptionPane.PLAIN_MESSAGE);
                     return;
                 }
@@ -198,7 +198,7 @@ public class Registration extends JFrame implements ActionListener{
                 	    "Middle Name: " + middleName + "\n" +
                 	    "Last Name: " + lastName + "\n" +
                 	    "Gender: " + Gender + "\n" +
-                	    "City: " + City + "\n" +
+                	    "Address: " + Address + "\n" +
                 	    "School: " + School + "\n" +
                 	    "Strand: " + strand + "\n" +  
                 	    "Birthday: " + Month + "," + Day + "," + Year + "\n" +
@@ -206,7 +206,7 @@ public class Registration extends JFrame implements ActionListener{
                 	    "Student Profile", 
                 	    JOptionPane.PLAIN_MESSAGE);
 
-                saveProfileToFile(firstName, middleName, lastName, Gender, City, School, strand, Month, Day, Year, Email);
+                saveProfileToFile(firstName, middleName, lastName, Gender, Address, School, strand, Month, Day, Year, Email);
             }
         });
         
@@ -220,7 +220,7 @@ public class Registration extends JFrame implements ActionListener{
                 fnTF.setText("");
                 mnTF.setText("");
                 lnTF.setText("");
-                cityTF.setText("");
+                addressTF.setText("");
                 scTF.setText("");
                 emailAddTF.setText("");
                 genderGroup.clearSelection();
@@ -261,7 +261,7 @@ public class Registration extends JFrame implements ActionListener{
 
     }
 
-    private void saveProfileToFile(String firstName, String middleName, String lastName, String Gender, String city, String school, String strand, String Month, String Day, String Year, String Email) {
+    private void saveProfileToFile(String firstName, String middleName, String lastName, String Gender, String Address, String school, String strand, String Month, String Day, String Year, String Email) {
         try {
             FileWriter fileWriter = new FileWriter("student_profile.txt", true);
             PrintWriter printWriter = new PrintWriter(fileWriter);
@@ -269,7 +269,7 @@ public class Registration extends JFrame implements ActionListener{
             printWriter.println("Middle Name : " + middleName);
             printWriter.println("Last Name : " + lastName);
             printWriter.println("Gender : " + Gender);
-            printWriter.println("City : " + city);
+            printWriter.println("Address : " + Address);
             printWriter.println("School : " + school);
             printWriter.println("Strand : " + strand);
             printWriter.println("Birthday: " + Month + "," + Day + "," + Year);
