@@ -6,13 +6,18 @@ import random
 from pygments.styles.paraiso_dark import RED
 
 # Define the server details
-SERVER_IP = '127.0.0.1'
+SERVER_IP = '127.0.0.1'  # Use localhost if running on the same machine
 PORT = 5555
 ADDR = (SERVER_IP, PORT)
 
 # Create a socket object
 client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-client.connect(ADDR)
+
+try:
+    client.connect(ADDR)
+except ConnectionRefusedError:
+    print(f"Failed to connect to {SERVER_IP}:{PORT}. Is the server running?")
+    exit(1)
 
 # Initialize Pygame
 pygame.init()
@@ -30,6 +35,7 @@ def receive_data():
             data = client.recv(4096)
             if data:
                 game_state = pickle.loads(data)
+                active_string = game_state['word']
                 life = game_state['player1_life']
                 life2 = game_state['player2_life']
         except ConnectionResetError:
@@ -120,9 +126,7 @@ while run:
         update_words()
         last_change_time = current_time
 
-    for i in range(1):
-        word_box(screen, active_string, 600, 50 + i * 200, 260, 100)
-
+    word_box(screen, active_string, 600, 50, 260, 100)
     pygame.display.flip()
 
     for event in pygame.event.get():
@@ -131,3 +135,4 @@ while run:
 
 pygame.quit()
 client.close()
+
