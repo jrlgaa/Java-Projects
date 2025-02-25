@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class Activity {
+public class Main {
 
 	public static class Information {
 
